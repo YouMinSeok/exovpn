@@ -1,0 +1,56 @@
+<!-- renderer/index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>VPN 클라이언트</title>
+    <style>
+        /* 간단한 로딩 스피너 스타일 */
+        #loading-spinner {
+            display: none;
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #3498db;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 2s linear infinite;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -30px 0 0 -30px;
+            z-index: 1000;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* 기타 스타일 */
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            position: relative; /* 로딩 스피너를 중앙에 배치하기 위해 추가 */
+        }
+
+        select, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>VPN 클라이언트</h1>
+    <div id="loading-spinner"></div> <!-- 로딩 스피너 추가 -->
+    <select id="server-select">
+        <option value="">서버를 선택하세요...</option>
+    </select>
+    <br>
+    <button id="connect-btn">연결</button>
+    <button id="disconnect-btn" disabled>연결 종료</button>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

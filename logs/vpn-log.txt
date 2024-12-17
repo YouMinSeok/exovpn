@@ -1,0 +1,915 @@
+2024-12-17 17:31:47 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:31:47 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:31:47 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:31:47 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:31:47 DCO version: 1.2.1
+2024-12-17 17:31:47 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:31:47 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:31:47 UDPv4 link local: (not bound)
+2024-12-17 17:31:47 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:31:47 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=be8033b9 5db7a48e
+2024-12-17 17:31:47 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:31:47 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:31:47 VERIFY KU OK
+2024-12-17 17:31:47 Validating certificate extended key usage
+2024-12-17 17:31:47 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:31:47 VERIFY EKU OK
+2024-12-17 17:31:47 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:31:47 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:31:47 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:31:47 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:31:47 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:31:48 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:31:52 PUSH: Received control message: 'PUSH_REPLY,ping 3,ping-restart 10,ifconfig 10.240.82.81 10.240.82.82,dhcp-option DNS 10.240.254.254,dhcp-option DNS 8.8.8.8,route-gateway 10.240.82.82,redirect-gateway def1'
+2024-12-17 17:31:52 OPTIONS IMPORT: --ifconfig/up options modified
+2024-12-17 17:31:52 OPTIONS IMPORT: route options modified
+2024-12-17 17:31:52 OPTIONS IMPORT: route-related options modified
+2024-12-17 17:31:52 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+2024-12-17 17:31:52 Using peer cipher 'AES-128-CBC'
+2024-12-17 17:31:52 interactive service msg_channel=0
+2024-12-17 17:31:52 ROUTE_GATEWAY 192.168.0.1/255.255.255.0 I=14 HWADDR=84:5c:f3:94:de:c3
+2024-12-17 17:31:52 open_tun
+2024-12-17 17:31:52 tap-windows6 device [OpenVPN TAP-Windows6] opened
+2024-12-17 17:31:52 TAP-Windows Driver Version 9.27 
+2024-12-17 17:31:52 Notified TAP-Windows driver to set a DHCP IP/netmask of 10.240.82.81/255.255.255.252 on interface {C9190BEC-441B-4C5C-8B3F-6B799AB08419} [DHCP-serv: 10.240.82.82, lease-time: 31536000]
+2024-12-17 17:31:52 Successful ARP Flush on interface [40] {C9190BEC-441B-4C5C-8B3F-6B799AB08419}
+2024-12-17 17:31:52 IPv4 MTU set to 1500 on interface 40 using SetIpInterfaceEntry()
+2024-12-17 17:31:52 Data Channel: cipher 'AES-128-CBC', auth 'SHA1'
+2024-12-17 17:31:52 Timers: ping 3, ping-restart 10
+2024-12-17 17:31:57 TEST ROUTES: 1/1 succeeded len=0 ret=1 a=0 u/d=up
+2024-12-17 17:31:57 C:\WINDOWS\system32\route.exe ADD 219.100.37.119 MASK 255.255.255.255 192.168.0.1
+2024-12-17 17:31:57 Route addition via ipapi [adaptive] failed because route exists
+2024-12-17 17:31:57 C:\WINDOWS\system32\route.exe ADD 0.0.0.0 MASK 128.0.0.0 10.240.82.82
+2024-12-17 17:31:57 ROUTE: CreateIpForwardEntry succeeded with dwForwardMetric1=25 and dwForwardType=4
+2024-12-17 17:31:57 Route addition via ipapi [adaptive] succeeded
+2024-12-17 17:31:57 C:\WINDOWS\system32\route.exe ADD 128.0.0.0 MASK 128.0.0.0 10.240.82.82
+2024-12-17 17:31:58 ROUTE: CreateIpForwardEntry succeeded with dwForwardMetric1=25 and dwForwardType=4
+2024-12-17 17:31:58 Route addition via ipapi [adaptive] succeeded
+2024-12-17 17:31:58 Initialization Sequence Completed
+VPN 연결 종료 (코드: null, 신호: SIGINT)
+2024-12-17 17:33:15 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:33:15 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:33:15 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:33:15 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:33:15 DCO version: 1.2.1
+2024-12-17 17:33:16 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:33:16 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:33:16 UDPv4 link local: (not bound)
+2024-12-17 17:33:16 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:33:16 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=b012794d b87140de
+2024-12-17 17:33:16 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:33:16 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:33:16 VERIFY KU OK
+2024-12-17 17:33:16 Validating certificate extended key usage
+2024-12-17 17:33:16 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:33:16 VERIFY EKU OK
+2024-12-17 17:33:16 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:33:16 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:33:16 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:33:16 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:33:16 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:33:17 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:33:19 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:33:19 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:33:19 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:33:19 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:33:19 DCO version: 1.2.1
+2024-12-17 17:33:20 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:33:20 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:33:20 UDPv4 link local: (not bound)
+2024-12-17 17:33:20 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:33:20 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=50f35f2e 8b9bc562
+2024-12-17 17:33:20 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:33:20 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:33:20 VERIFY KU OK
+2024-12-17 17:33:20 Validating certificate extended key usage
+2024-12-17 17:33:20 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:33:20 VERIFY EKU OK
+2024-12-17 17:33:20 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:33:20 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:33:20 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:33:20 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:33:20 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:33:21 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:33:24 PUSH: Received control message: 'PUSH_REPLY,ping 3,ping-restart 10,ifconfig 10.240.22.237 10.240.22.238,dhcp-option DNS 10.240.254.254,dhcp-option DNS 8.8.8.8,route-gateway 10.240.22.238,redirect-gateway def1'
+2024-12-17 17:33:24 OPTIONS IMPORT: --ifconfig/up options modified
+2024-12-17 17:33:24 OPTIONS IMPORT: route options modified
+2024-12-17 17:33:24 OPTIONS IMPORT: route-related options modified
+2024-12-17 17:33:24 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+2024-12-17 17:33:24 Using peer cipher 'AES-128-CBC'
+2024-12-17 17:33:24 interactive service msg_channel=0
+2024-12-17 17:33:24 ROUTE_GATEWAY 192.168.0.1/255.255.255.0 I=14 HWADDR=84:5c:f3:94:de:c3
+2024-12-17 17:33:24 open_tun
+2024-12-17 17:33:24 tap-windows6 device [OpenVPN TAP-Windows6] opened
+2024-12-17 17:33:24 TAP-Windows Driver Version 9.27 
+2024-12-17 17:33:24 Notified TAP-Windows driver to set a DHCP IP/netmask of 10.240.22.237/255.255.255.252 on interface {C9190BEC-441B-4C5C-8B3F-6B799AB08419} [DHCP-serv: 10.240.22.238, lease-time: 31536000]
+2024-12-17 17:33:24 Successful ARP Flush on interface [40] {C9190BEC-441B-4C5C-8B3F-6B799AB08419}
+2024-12-17 17:33:24 IPv4 MTU set to 1500 on interface 40 using SetIpInterfaceEntry()
+2024-12-17 17:33:24 Data Channel: cipher 'AES-128-CBC', auth 'SHA1'
+2024-12-17 17:33:24 Timers: ping 3, ping-restart 10
+2024-12-17 17:33:29 TEST ROUTES: 1/1 succeeded len=0 ret=1 a=0 u/d=up
+2024-12-17 17:33:29 C:\WINDOWS\system32\route.exe ADD 219.100.37.119 MASK 255.255.255.255 192.168.0.1
+2024-12-17 17:33:29 Route addition via ipapi [adaptive] failed because route exists
+2024-12-17 17:33:29 C:\WINDOWS\system32\route.exe ADD 0.0.0.0 MASK 128.0.0.0 10.240.22.238
+2024-12-17 17:33:29 ROUTE: CreateIpForwardEntry succeeded with dwForwardMetric1=25 and dwForwardType=4
+2024-12-17 17:33:29 Route addition via ipapi [adaptive] succeeded
+2024-12-17 17:33:29 C:\WINDOWS\system32\route.exe ADD 128.0.0.0 MASK 128.0.0.0 10.240.22.238
+2024-12-17 17:33:29 ROUTE: CreateIpForwardEntry succeeded with dwForwardMetric1=25 and dwForwardType=4
+2024-12-17 17:33:29 Route addition via ipapi [adaptive] succeeded
+2024-12-17 17:33:29 Initialization Sequence Completed
+VPN 연결 종료 (코드: null, 신호: SIGINT)
+2024-12-17 17:35:00 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:35:00 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:35:00 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:35:00 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:35:00 DCO version: 1.2.1
+2024-12-17 17:35:00 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:00 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:35:00 UDPv4 link local: (not bound)
+2024-12-17 17:35:00 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:00 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=8071f146 2a7120d2
+2024-12-17 17:35:00 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:35:00 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:35:00 VERIFY KU OK
+2024-12-17 17:35:00 Validating certificate extended key usage
+2024-12-17 17:35:00 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:35:00 VERIFY EKU OK
+2024-12-17 17:35:00 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:35:00 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:35:00 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:00 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:35:00 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:35:01 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:35:02 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:35:02 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:35:02 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:35:02 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:35:02 DCO version: 1.2.1
+2024-12-17 17:35:02 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:02 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:35:02 UDPv4 link local: (not bound)
+2024-12-17 17:35:02 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:02 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=5d3c4601 9d396dc5
+2024-12-17 17:35:02 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:35:02 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:35:02 VERIFY KU OK
+2024-12-17 17:35:02 Validating certificate extended key usage
+2024-12-17 17:35:02 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:35:02 VERIFY EKU OK
+2024-12-17 17:35:02 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:35:02 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:35:02 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:02 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:35:02 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:35:04 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:35:07 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:35:07 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:35:07 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:35:07 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:35:07 DCO version: 1.2.1
+2024-12-17 17:35:07 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:07 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:35:07 UDPv4 link local: (not bound)
+2024-12-17 17:35:07 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:07 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=4d43488c 84eb5bac
+2024-12-17 17:35:07 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:35:07 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:35:07 VERIFY KU OK
+2024-12-17 17:35:07 Validating certificate extended key usage
+2024-12-17 17:35:07 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:35:07 VERIFY EKU OK
+2024-12-17 17:35:07 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:35:07 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:35:07 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:07 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:35:07 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:35:08 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:35:13 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:35:13 AUTH: Received control message: AUTH_FAILED
+2024-12-17 17:35:13 SIGTERM[soft,auth-failure] received, process exiting
+VPN 연결 종료 (코드: 0, 신호: null)
+2024-12-17 17:35:32 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:35:32 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:35:32 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:35:32 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:35:32 DCO version: 1.2.1
+2024-12-17 17:35:32 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:32 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:35:32 UDPv4 link local: (not bound)
+2024-12-17 17:35:32 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:32 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=f7eb4171 3c008ee1
+2024-12-17 17:35:32 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:35:32 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:35:32 VERIFY KU OK
+2024-12-17 17:35:32 Validating certificate extended key usage
+2024-12-17 17:35:32 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:35:32 VERIFY EKU OK
+2024-12-17 17:35:32 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:35:32 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:35:32 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:32 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:35:32 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:35:33 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:35:35 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:35:35 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:35:35 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:35:35 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:35:35 DCO version: 1.2.1
+2024-12-17 17:35:35 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:35 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:35:35 UDPv4 link local: (not bound)
+2024-12-17 17:35:35 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:35 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=74944458 cb0cb181
+2024-12-17 17:35:35 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:35:35 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:35:35 VERIFY KU OK
+2024-12-17 17:35:35 Validating certificate extended key usage
+2024-12-17 17:35:35 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:35:35 VERIFY EKU OK
+2024-12-17 17:35:35 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:35:35 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:35:35 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:35 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:35:35 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:35:36 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:35:38 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:35:38 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:35:38 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:35:38 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:35:38 DCO version: 1.2.1
+2024-12-17 17:35:38 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:38 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:35:38 UDPv4 link local: (not bound)
+2024-12-17 17:35:38 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:38 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=49d859d8 c2f53514
+2024-12-17 17:35:38 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:35:38 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:35:38 VERIFY KU OK
+2024-12-17 17:35:38 Validating certificate extended key usage
+2024-12-17 17:35:38 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:35:38 VERIFY EKU OK
+2024-12-17 17:35:38 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:35:38 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:35:38 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:38 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:35:38 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:35:39 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:35:41 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:35:41 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:35:41 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:35:41 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:35:41 DCO version: 1.2.1
+2024-12-17 17:35:41 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:41 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:35:41 UDPv4 link local: (not bound)
+2024-12-17 17:35:41 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:41 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=d1a87b5f a51880f1
+2024-12-17 17:35:41 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:35:41 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:35:41 VERIFY KU OK
+2024-12-17 17:35:41 Validating certificate extended key usage
+2024-12-17 17:35:41 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:35:41 VERIFY EKU OK
+2024-12-17 17:35:41 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:35:41 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:35:41 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:35:41 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:35:41 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:35:42 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:35:47 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:35:48 AUTH: Received control message: AUTH_FAILED
+2024-12-17 17:35:48 SIGTERM[soft,auth-failure] received, process exiting
+VPN 연결 종료 (코드: 0, 신호: null)
+2024-12-17 17:36:16 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:36:16 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:36:16 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:36:16 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:36:16 DCO version: 1.2.1
+2024-12-17 17:36:16 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:36:16 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:36:16 UDPv4 link local: (not bound)
+2024-12-17 17:36:16 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:36:16 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=2cad1330 b74aff84
+2024-12-17 17:36:16 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:36:16 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:36:16 VERIFY KU OK
+2024-12-17 17:36:16 Validating certificate extended key usage
+2024-12-17 17:36:16 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:36:16 VERIFY EKU OK
+2024-12-17 17:36:16 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:36:16 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:36:16 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:36:16 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:36:16 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:36:17 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:36:19 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:36:19 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:36:19 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:36:19 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:36:19 DCO version: 1.2.1
+2024-12-17 17:36:19 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:36:19 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:36:19 UDPv4 link local: (not bound)
+2024-12-17 17:36:19 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:36:21 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=557f707d 01dc8385
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:36:22 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:36:22 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:36:22 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:36:22 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:36:22 DCO version: 1.2.1
+2024-12-17 17:36:22 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:36:22 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:36:22 UDPv4 link local: (not bound)
+2024-12-17 17:36:22 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:36:22 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=8f208c82 f46ed4dd
+2024-12-17 17:36:22 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:36:22 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:36:22 VERIFY KU OK
+2024-12-17 17:36:22 Validating certificate extended key usage
+2024-12-17 17:36:22 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:36:22 VERIFY EKU OK
+2024-12-17 17:36:22 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:36:22 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:36:22 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:36:22 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:36:22 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:36:23 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:36:25 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:36:25 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:36:25 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:36:25 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:36:25 DCO version: 1.2.1
+2024-12-17 17:36:25 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:36:25 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:36:25 UDPv4 link local: (not bound)
+2024-12-17 17:36:25 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:36:25 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=f9a20d93 26fc03e6
+2024-12-17 17:36:25 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:36:25 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:36:25 VERIFY KU OK
+2024-12-17 17:36:25 Validating certificate extended key usage
+2024-12-17 17:36:25 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:36:25 VERIFY EKU OK
+2024-12-17 17:36:25 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:36:25 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:36:25 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:36:25 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:36:25 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:36:26 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:36:28 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:36:28 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:36:28 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:36:28 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:36:28 DCO version: 1.2.1
+2024-12-17 17:36:28 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:36:28 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:36:28 UDPv4 link local: (not bound)
+2024-12-17 17:36:28 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:36:28 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=11ae7cb6 d859fd2d
+2024-12-17 17:36:28 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:36:28 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:36:28 VERIFY KU OK
+2024-12-17 17:36:28 Validating certificate extended key usage
+2024-12-17 17:36:28 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:36:28 VERIFY EKU OK
+2024-12-17 17:36:28 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:36:28 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:36:28 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:36:28 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:36:28 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:36:29 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:36:34 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:36:34 AUTH: Received control message: AUTH_FAILED
+2024-12-17 17:36:34 SIGTERM[soft,auth-failure] received, process exiting
+VPN 연결 종료 (코드: 0, 신호: null)
+2024-12-17 17:37:55 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:37:55 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:37:55 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:37:55 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:37:55 DCO version: 1.2.1
+2024-12-17 17:37:55 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:37:55 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:37:55 UDPv4 link local: (not bound)
+2024-12-17 17:37:55 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:37:55 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=e517a9ab 09cf7598
+2024-12-17 17:37:56 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:37:56 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:37:56 VERIFY KU OK
+2024-12-17 17:37:56 Validating certificate extended key usage
+2024-12-17 17:37:56 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:37:56 VERIFY EKU OK
+2024-12-17 17:37:56 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:37:58 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:37:58 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:37:58 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:37:58 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:37:59 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:38:04 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:38:04 AUTH: Received control message: AUTH_FAILED
+2024-12-17 17:38:04 SIGTERM[soft,auth-failure] received, process exiting
+VPN 연결 종료 (코드: 0, 신호: null)
+2024-12-17 17:45:20 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:45:20 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:45:20 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:45:20 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:45:20 DCO version: 1.2.1
+2024-12-17 17:45:21 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:21 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:45:21 UDPv4 link local: (not bound)
+2024-12-17 17:45:21 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:21 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=dc9c917d 594cb98c
+2024-12-17 17:45:21 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:45:21 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:45:21 VERIFY KU OK
+2024-12-17 17:45:21 Validating certificate extended key usage
+2024-12-17 17:45:21 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:45:21 VERIFY EKU OK
+2024-12-17 17:45:21 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:45:21 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:45:21 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:21 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:45:21 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:45:22 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:45:23 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:45:23 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:45:23 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:45:23 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:45:23 DCO version: 1.2.1
+2024-12-17 17:45:23 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:23 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:45:23 UDPv4 link local: (not bound)
+2024-12-17 17:45:23 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:23 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=d4afd3f5 34153176
+2024-12-17 17:45:24 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:45:24 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:45:24 VERIFY KU OK
+2024-12-17 17:45:24 Validating certificate extended key usage
+2024-12-17 17:45:24 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:45:24 VERIFY EKU OK
+2024-12-17 17:45:24 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:45:24 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:45:24 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:24 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:45:24 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:45:25 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:45:30 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:45:30 AUTH: Received control message: AUTH_FAILED
+2024-12-17 17:45:30 SIGTERM[soft,auth-failure] received, process exiting
+VPN 연결 종료 (코드: 0, 신호: null)
+2024-12-17 17:45:42 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:45:42 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:45:42 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:45:42 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:45:42 DCO version: 1.2.1
+2024-12-17 17:45:42 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:42 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:45:42 UDPv4 link local: (not bound)
+2024-12-17 17:45:42 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:42 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=719d34f0 4e267262
+2024-12-17 17:45:42 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:45:42 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:45:42 VERIFY KU OK
+2024-12-17 17:45:42 Validating certificate extended key usage
+2024-12-17 17:45:42 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:45:42 VERIFY EKU OK
+2024-12-17 17:45:42 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:45:42 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:45:42 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:42 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:45:42 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:45:43 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:45:45 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:45:45 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:45:45 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:45:45 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:45:45 DCO version: 1.2.1
+2024-12-17 17:45:45 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:45 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:45:45 UDPv4 link local: (not bound)
+2024-12-17 17:45:45 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:45 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=c4934d5e 99aeb3f2
+2024-12-17 17:45:45 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:45:45 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:45:45 VERIFY KU OK
+2024-12-17 17:45:45 Validating certificate extended key usage
+2024-12-17 17:45:45 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:45:45 VERIFY EKU OK
+2024-12-17 17:45:45 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:45:45 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:45:45 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:45 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:45:45 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:45:46 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:45:48 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:45:48 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:45:48 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:45:48 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:45:48 DCO version: 1.2.1
+2024-12-17 17:45:48 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:48 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:45:48 UDPv4 link local: (not bound)
+2024-12-17 17:45:48 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:48 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=94b98ea9 396c2c9c
+2024-12-17 17:45:48 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:45:48 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:45:48 VERIFY KU OK
+2024-12-17 17:45:48 Validating certificate extended key usage
+2024-12-17 17:45:48 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:45:48 VERIFY EKU OK
+2024-12-17 17:45:48 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:45:48 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:45:48 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:45:48 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:45:48 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:45:49 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:45:54 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:45:55 AUTH: Received control message: AUTH_FAILED
+2024-12-17 17:45:55 SIGTERM[soft,auth-failure] received, process exiting
+VPN 연결 종료 (코드: 0, 신호: null)
+2024-12-17 17:48:55 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:48:55 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:48:55 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:48:55 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:48:55 DCO version: 1.2.1
+2024-12-17 17:48:55 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:48:55 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:48:55 UDPv4 link local: (not bound)
+2024-12-17 17:48:55 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:48:55 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=28d49fe9 92eba213
+2024-12-17 17:48:55 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:48:55 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:48:55 VERIFY KU OK
+2024-12-17 17:48:55 Validating certificate extended key usage
+2024-12-17 17:48:55 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:48:55 VERIFY EKU OK
+2024-12-17 17:48:55 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:48:55 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:48:55 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:48:55 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:48:55 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:48:56 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:48:58 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:48:58 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:48:58 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:48:58 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:48:58 DCO version: 1.2.1
+2024-12-17 17:48:58 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:48:58 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:48:58 UDPv4 link local: (not bound)
+2024-12-17 17:48:58 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:48:58 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=200350db 5dd6af5f
+2024-12-17 17:48:58 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:48:58 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:48:58 VERIFY KU OK
+2024-12-17 17:48:58 Validating certificate extended key usage
+2024-12-17 17:48:58 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:48:58 VERIFY EKU OK
+2024-12-17 17:48:58 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:48:58 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:48:58 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:48:58 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:48:58 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:48:59 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:49:01 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:49:01 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:49:01 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:49:01 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:49:01 DCO version: 1.2.1
+2024-12-17 17:49:01 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:49:01 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:49:01 UDPv4 link local: (not bound)
+2024-12-17 17:49:01 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:49:01 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=6e6523bb 0e8be679
+2024-12-17 17:49:01 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:49:01 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:49:01 VERIFY KU OK
+2024-12-17 17:49:01 Validating certificate extended key usage
+2024-12-17 17:49:01 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:49:01 VERIFY EKU OK
+2024-12-17 17:49:01 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:49:01 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:49:01 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:49:01 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:49:01 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:49:02 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+VPN 연결 종료 (코드: 1, 신호: null)
+2024-12-17 17:49:04 DEPRECATED OPTION: --cipher set to 'AES-128-CBC' but missing in --data-ciphers (AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305). OpenVPN ignores --cipher for cipher negotiations. 
+2024-12-17 17:49:04 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:49:04 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:49:04 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:49:04 DCO version: 1.2.1
+2024-12-17 17:49:04 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+2024-12-17 17:49:04 TCP/UDP: Preserving recently used remote address: [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:04 ovpn-dco device [OpenVPN Data Channel Offload] opened
+2024-12-17 17:49:04 UDP link local: (not bound)
+2024-12-17 17:49:04 UDP link remote: [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:18 TLS: Initial packet from [AF_INET]111.90.188.109:1195, sid=af73759f 008a1212
+2024-12-17 17:49:18 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:49:18 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:49:18 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:49:18 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:49:18 [opengw.net] Peer Connection Initiated with [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:18 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:49:18 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:49:19 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:49:20 PUSH: Received control message: 'PUSH_REPLY,ping 3,ping-restart 10,ifconfig 10.211.1.5 10.211.1.6,dhcp-option DNS 10.211.254.254,dhcp-option DNS 8.8.8.8,route-gateway 10.211.1.6,redirect-gateway def1'
+2024-12-17 17:49:20 OPTIONS IMPORT: --ifconfig/up options modified
+2024-12-17 17:49:20 OPTIONS IMPORT: route options modified
+2024-12-17 17:49:20 OPTIONS IMPORT: route-related options modified
+2024-12-17 17:49:20 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+2024-12-17 17:49:20 OPTIONS ERROR: failed to negotiate cipher with server.  Add the server's cipher ('AES-128-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305') if you want to connect to this server.
+2024-12-17 17:49:20 ERROR: Failed to apply push options
+2024-12-17 17:49:20 Failed to open tun/tap interface
+2024-12-17 17:49:20 Closing DCO interface
+2024-12-17 17:49:20 SIGUSR1[soft,process-push-msg-failed] received, process restarting
+2024-12-17 17:49:20 Restart pause, 1 second(s)
+2024-12-17 17:49:21 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+2024-12-17 17:49:21 TCP/UDP: Preserving recently used remote address: [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:21 ovpn-dco device [OpenVPN Data Channel Offload] opened
+2024-12-17 17:49:21 UDP link local: (not bound)
+2024-12-17 17:49:21 UDP link remote: [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:21 TLS: Initial packet from [AF_INET]111.90.188.109:1195, sid=739303e9 e900eb3f
+2024-12-17 17:49:21 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:49:21 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:49:21 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:49:21 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:49:21 [opengw.net] Peer Connection Initiated with [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:21 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:49:21 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:49:22 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:49:22 PUSH: Received control message: 'PUSH_REPLY,ping 3,ping-restart 10,ifconfig 10.211.1.69 10.211.1.70,dhcp-option DNS 10.211.254.254,dhcp-option DNS 8.8.8.8,route-gateway 10.211.1.70,redirect-gateway def1'
+2024-12-17 17:49:22 OPTIONS IMPORT: --ifconfig/up options modified
+2024-12-17 17:49:22 OPTIONS IMPORT: route options modified
+2024-12-17 17:49:22 OPTIONS IMPORT: route-related options modified
+2024-12-17 17:49:22 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+2024-12-17 17:49:22 OPTIONS ERROR: failed to negotiate cipher with server.  Add the server's cipher ('AES-128-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305') if you want to connect to this server.
+2024-12-17 17:49:22 ERROR: Failed to apply push options
+2024-12-17 17:49:22 Failed to open tun/tap interface
+2024-12-17 17:49:22 Closing DCO interface
+2024-12-17 17:49:22 SIGUSR1[soft,process-push-msg-failed] received, process restarting
+2024-12-17 17:49:22 Restart pause, 1 second(s)
+2024-12-17 17:49:24 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+2024-12-17 17:49:24 TCP/UDP: Preserving recently used remote address: [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:24 ovpn-dco device [OpenVPN Data Channel Offload] opened
+2024-12-17 17:49:24 UDP link local: (not bound)
+2024-12-17 17:49:24 UDP link remote: [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:26 TLS: Initial packet from [AF_INET]111.90.188.109:1195, sid=31346a7b b9026517
+2024-12-17 17:49:26 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:49:26 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:49:26 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:49:26 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:49:26 [opengw.net] Peer Connection Initiated with [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:26 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:49:26 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:49:27 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:49:27 PUSH: Received control message: 'PUSH_REPLY,ping 3,ping-restart 10,ifconfig 10.211.1.57 10.211.1.58,dhcp-option DNS 10.211.254.254,dhcp-option DNS 8.8.8.8,route-gateway 10.211.1.58,redirect-gateway def1'
+2024-12-17 17:49:27 OPTIONS IMPORT: --ifconfig/up options modified
+2024-12-17 17:49:27 OPTIONS IMPORT: route options modified
+2024-12-17 17:49:27 OPTIONS IMPORT: route-related options modified
+2024-12-17 17:49:27 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+2024-12-17 17:49:27 OPTIONS ERROR: failed to negotiate cipher with server.  Add the server's cipher ('AES-128-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305') if you want to connect to this server.
+2024-12-17 17:49:27 ERROR: Failed to apply push options
+2024-12-17 17:49:27 Failed to open tun/tap interface
+2024-12-17 17:49:27 Closing DCO interface
+2024-12-17 17:49:27 SIGUSR1[soft,process-push-msg-failed] received, process restarting
+2024-12-17 17:49:27 Restart pause, 1 second(s)
+2024-12-17 17:49:28 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+2024-12-17 17:49:28 TCP/UDP: Preserving recently used remote address: [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:28 ovpn-dco device [OpenVPN Data Channel Offload] opened
+2024-12-17 17:49:28 UDP link local: (not bound)
+2024-12-17 17:49:28 UDP link remote: [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:34 TLS: Initial packet from [AF_INET]111.90.188.109:1195, sid=4124e8ac 209605a6
+2024-12-17 17:49:34 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:49:34 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:49:34 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:49:34 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:49:34 [opengw.net] Peer Connection Initiated with [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:34 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:49:34 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:49:35 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:49:35 PUSH: Received control message: 'PUSH_REPLY,ping 3,ping-restart 10,ifconfig 10.211.1.69 10.211.1.70,dhcp-option DNS 10.211.254.254,dhcp-option DNS 8.8.8.8,route-gateway 10.211.1.70,redirect-gateway def1'
+2024-12-17 17:49:35 OPTIONS IMPORT: --ifconfig/up options modified
+2024-12-17 17:49:35 OPTIONS IMPORT: route options modified
+2024-12-17 17:49:35 OPTIONS IMPORT: route-related options modified
+2024-12-17 17:49:35 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+2024-12-17 17:49:35 OPTIONS ERROR: failed to negotiate cipher with server.  Add the server's cipher ('AES-128-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305') if you want to connect to this server.
+2024-12-17 17:49:35 ERROR: Failed to apply push options
+2024-12-17 17:49:35 Failed to open tun/tap interface
+2024-12-17 17:49:35 Closing DCO interface
+2024-12-17 17:49:35 SIGUSR1[soft,process-push-msg-failed] received, process restarting
+2024-12-17 17:49:35 Restart pause, 1 second(s)
+2024-12-17 17:49:36 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+2024-12-17 17:49:36 TCP/UDP: Preserving recently used remote address: [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:36 ovpn-dco device [OpenVPN Data Channel Offload] opened
+2024-12-17 17:49:36 UDP link local: (not bound)
+2024-12-17 17:49:36 UDP link remote: [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:36 TLS: Initial packet from [AF_INET]111.90.188.109:1195, sid=9adf3707 5ce34154
+2024-12-17 17:49:36 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:49:36 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:49:36 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:49:36 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:49:36 [opengw.net] Peer Connection Initiated with [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:36 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:49:36 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:49:37 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:49:37 PUSH: Received control message: 'PUSH_REPLY,ping 3,ping-restart 10,ifconfig 10.211.1.45 10.211.1.46,dhcp-option DNS 10.211.254.254,dhcp-option DNS 8.8.8.8,route-gateway 10.211.1.46,redirect-gateway def1'
+2024-12-17 17:49:37 OPTIONS IMPORT: --ifconfig/up options modified
+2024-12-17 17:49:37 OPTIONS IMPORT: route options modified
+2024-12-17 17:49:37 OPTIONS IMPORT: route-related options modified
+2024-12-17 17:49:37 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+2024-12-17 17:49:37 OPTIONS ERROR: failed to negotiate cipher with server.  Add the server's cipher ('AES-128-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305') if you want to connect to this server.
+2024-12-17 17:49:37 ERROR: Failed to apply push options
+2024-12-17 17:49:37 Failed to open tun/tap interface
+2024-12-17 17:49:37 Closing DCO interface
+2024-12-17 17:49:37 SIGUSR1[soft,process-push-msg-failed] received, process restarting
+2024-12-17 17:49:37 Restart pause, 2 second(s)
+2024-12-17 17:49:39 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+2024-12-17 17:49:39 TCP/UDP: Preserving recently used remote address: [AF_INET]111.90.188.109:1195
+2024-12-17 17:49:39 ovpn-dco device [OpenVPN Data Channel Offload] opened
+2024-12-17 17:49:39 UDP link local: (not bound)
+2024-12-17 17:49:39 UDP link remote: [AF_INET]111.90.188.109:1195
+2024-12-17 17:50:09 TLS: Initial packet from [AF_INET]111.90.188.109:1195, sid=f4bd3897 a8a81dcf
+2024-12-17 17:50:09 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:50:09 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:50:09 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:50:09 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:50:09 [opengw.net] Peer Connection Initiated with [AF_INET]111.90.188.109:1195
+2024-12-17 17:50:09 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:50:09 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:50:10 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:50:10 PUSH: Received control message: 'PUSH_REPLY,ping 3,ping-restart 10,ifconfig 10.211.1.5 10.211.1.6,dhcp-option DNS 10.211.254.254,dhcp-option DNS 8.8.8.8,route-gateway 10.211.1.6,redirect-gateway def1'
+2024-12-17 17:50:10 OPTIONS IMPORT: --ifconfig/up options modified
+2024-12-17 17:50:10 OPTIONS IMPORT: route options modified
+2024-12-17 17:50:10 OPTIONS IMPORT: route-related options modified
+2024-12-17 17:50:10 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+2024-12-17 17:50:10 OPTIONS ERROR: failed to negotiate cipher with server.  Add the server's cipher ('AES-128-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305') if you want to connect to this server.
+2024-12-17 17:50:10 ERROR: Failed to apply push options
+2024-12-17 17:50:10 Failed to open tun/tap interface
+2024-12-17 17:50:10 Closing DCO interface
+2024-12-17 17:50:10 SIGUSR1[soft,process-push-msg-failed] received, process restarting
+2024-12-17 17:50:10 Restart pause, 4 second(s)
+2024-12-17 17:50:14 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+2024-12-17 17:50:14 TCP/UDP: Preserving recently used remote address: [AF_INET]111.90.188.109:1195
+2024-12-17 17:50:14 ovpn-dco device [OpenVPN Data Channel Offload] opened
+2024-12-17 17:50:14 UDP link local: (not bound)
+2024-12-17 17:50:14 UDP link remote: [AF_INET]111.90.188.109:1195
+2024-12-17 17:50:17 TLS: Initial packet from [AF_INET]111.90.188.109:1195, sid=e1f6a7a5 2a389a7e
+2024-12-17 17:50:17 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:50:17 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:50:17 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:50:17 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:50:17 [opengw.net] Peer Connection Initiated with [AF_INET]111.90.188.109:1195
+2024-12-17 17:50:17 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:50:17 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:50:18 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:50:18 PUSH: Received control message: 'PUSH_REPLY,ping 3,ping-restart 10,ifconfig 10.211.1.57 10.211.1.58,dhcp-option DNS 10.211.254.254,dhcp-option DNS 8.8.8.8,route-gateway 10.211.1.58,redirect-gateway def1'
+2024-12-17 17:50:18 OPTIONS IMPORT: --ifconfig/up options modified
+2024-12-17 17:50:18 OPTIONS IMPORT: route options modified
+2024-12-17 17:50:18 OPTIONS IMPORT: route-related options modified
+2024-12-17 17:50:18 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+2024-12-17 17:50:18 OPTIONS ERROR: failed to negotiate cipher with server.  Add the server's cipher ('AES-128-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305') if you want to connect to this server.
+2024-12-17 17:50:18 ERROR: Failed to apply push options
+2024-12-17 17:50:18 Failed to open tun/tap interface
+2024-12-17 17:50:18 Closing DCO interface
+2024-12-17 17:50:18 SIGUSR1[soft,process-push-msg-failed] received, process restarting
+2024-12-17 17:50:18 Restart pause, 8 second(s)
+2024-12-17 17:50:26 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+2024-12-17 17:50:26 TCP/UDP: Preserving recently used remote address: [AF_INET]111.90.188.109:1195
+2024-12-17 17:50:26 ovpn-dco device [OpenVPN Data Channel Offload] opened
+2024-12-17 17:50:26 UDP link local: (not bound)
+2024-12-17 17:50:26 UDP link remote: [AF_INET]111.90.188.109:1195
+2024-12-17 17:50:28 TLS: Initial packet from [AF_INET]111.90.188.109:1195, sid=6dde146b 7e402085
+2024-12-17 17:50:28 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:50:28 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:50:28 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:50:28 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:50:28 [opengw.net] Peer Connection Initiated with [AF_INET]111.90.188.109:1195
+2024-12-17 17:50:28 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:50:28 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:50:29 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:50:30 PUSH: Received control message: 'PUSH_REPLY,ping 3,ping-restart 10,ifconfig 10.211.1.5 10.211.1.6,dhcp-option DNS 10.211.254.254,dhcp-option DNS 8.8.8.8,route-gateway 10.211.1.6,redirect-gateway def1'
+2024-12-17 17:50:30 OPTIONS IMPORT: --ifconfig/up options modified
+2024-12-17 17:50:30 OPTIONS IMPORT: route options modified
+2024-12-17 17:50:30 OPTIONS IMPORT: route-related options modified
+2024-12-17 17:50:30 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+2024-12-17 17:50:30 OPTIONS ERROR: failed to negotiate cipher with server.  Add the server's cipher ('AES-128-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305') if you want to connect to this server.
+2024-12-17 17:50:30 ERROR: Failed to apply push options
+2024-12-17 17:50:30 Failed to open tun/tap interface
+2024-12-17 17:50:30 Closing DCO interface
+2024-12-17 17:50:30 SIGUSR1[soft,process-push-msg-failed] received, process restarting
+2024-12-17 17:50:30 Restart pause, 16 second(s)
+2024-12-17 17:50:46 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+2024-12-17 17:50:46 TCP/UDP: Preserving recently used remote address: [AF_INET]111.90.188.109:1195
+2024-12-17 17:50:46 ovpn-dco device [OpenVPN Data Channel Offload] opened
+2024-12-17 17:50:46 UDP link local: (not bound)
+2024-12-17 17:50:46 UDP link remote: [AF_INET]111.90.188.109:1195
+2024-12-17 17:50:46 TLS: Initial packet from [AF_INET]111.90.188.109:1195, sid=a54203c1 eb3b8c4d
+2024-12-17 17:50:46 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:50:46 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:50:46 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:50:46 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:50:46 [opengw.net] Peer Connection Initiated with [AF_INET]111.90.188.109:1195
+2024-12-17 17:50:46 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:50:46 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:50:47 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:50:47 PUSH: Received control message: 'PUSH_REPLY,ping 3,ping-restart 10,ifconfig 10.211.1.5 10.211.1.6,dhcp-option DNS 10.211.254.254,dhcp-option DNS 8.8.8.8,route-gateway 10.211.1.6,redirect-gateway def1'
+2024-12-17 17:50:47 OPTIONS IMPORT: --ifconfig/up options modified
+2024-12-17 17:50:47 OPTIONS IMPORT: route options modified
+2024-12-17 17:50:47 OPTIONS IMPORT: route-related options modified
+2024-12-17 17:50:47 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+2024-12-17 17:50:47 OPTIONS ERROR: failed to negotiate cipher with server.  Add the server's cipher ('AES-128-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305') if you want to connect to this server.
+2024-12-17 17:50:47 ERROR: Failed to apply push options
+2024-12-17 17:50:47 Failed to open tun/tap interface
+2024-12-17 17:50:47 Closing DCO interface
+2024-12-17 17:50:47 SIGUSR1[soft,process-push-msg-failed] received, process restarting
+2024-12-17 17:50:47 Restart pause, 32 second(s)
+2024-12-17 17:51:19 WARNING: No server certificate verification method has been enabled.  See http://openvpn.net/howto.html#mitm for more info.
+2024-12-17 17:51:19 TCP/UDP: Preserving recently used remote address: [AF_INET]111.90.188.109:1195
+2024-12-17 17:51:19 ovpn-dco device [OpenVPN Data Channel Offload] opened
+2024-12-17 17:51:19 UDP link local: (not bound)
+2024-12-17 17:51:19 UDP link remote: [AF_INET]111.90.188.109:1195
+2024-12-17 17:51:33 TLS: Initial packet from [AF_INET]111.90.188.109:1195, sid=efe645ee cc8c2647
+2024-12-17 17:51:33 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:51:33 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:51:33 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:51:33 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:51:33 [opengw.net] Peer Connection Initiated with [AF_INET]111.90.188.109:1195
+2024-12-17 17:51:33 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:51:33 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:51:34 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:51:34 PUSH: Received control message: 'PUSH_REPLY,ping 3,ping-restart 10,ifconfig 10.211.1.69 10.211.1.70,dhcp-option DNS 10.211.254.254,dhcp-option DNS 8.8.8.8,route-gateway 10.211.1.70,redirect-gateway def1'
+2024-12-17 17:51:34 OPTIONS IMPORT: --ifconfig/up options modified
+2024-12-17 17:51:34 OPTIONS IMPORT: route options modified
+2024-12-17 17:51:34 OPTIONS IMPORT: route-related options modified
+2024-12-17 17:51:34 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+2024-12-17 17:51:34 OPTIONS ERROR: failed to negotiate cipher with server.  Add the server's cipher ('AES-128-CBC') to --data-ciphers (currently 'AES-256-GCM:AES-128-GCM:CHACHA20-POLY1305') if you want to connect to this server.
+2024-12-17 17:51:34 ERROR: Failed to apply push options
+2024-12-17 17:51:34 Failed to open tun/tap interface
+2024-12-17 17:51:34 Closing DCO interface
+2024-12-17 17:51:34 SIGUSR1[soft,process-push-msg-failed] received, process restarting
+2024-12-17 17:51:34 Restart pause, 64 second(s)
+VPN 연결 종료 (코드: null, 신호: SIGINT)
+2024-12-17 17:56:30 Note: cipher 'AES-128-CBC' in --data-ciphers is not supported by ovpn-dco, disabling data channel offload.
+2024-12-17 17:56:30 OpenVPN 2.6.12 [git:v2.6.12/038a94bae57a446c] Windows [SSL (OpenSSL)] [LZO] [LZ4] [PKCS11] [AEAD] [DCO] built on Jul 18 2024
+2024-12-17 17:56:30 Windows version 10.0 (Windows 10 or greater), amd64 executable
+2024-12-17 17:56:30 library versions: OpenSSL 3.4.0 22 Oct 2024, LZO 2.10
+2024-12-17 17:56:30 DCO version: 1.2.1
+2024-12-17 17:56:30 TCP/UDP: Preserving recently used remote address: [AF_INET]219.100.37.119:1195
+2024-12-17 17:56:30 Socket Buffers: R=[65536->65536] S=[65536->65536]
+2024-12-17 17:56:30 UDPv4 link local: (not bound)
+2024-12-17 17:56:30 UDPv4 link remote: [AF_INET]219.100.37.119:1195
+2024-12-17 17:56:30 TLS: Initial packet from [AF_INET]219.100.37.119:1195, sid=f8d01690 27cc7a52
+2024-12-17 17:56:30 VERIFY OK: depth=2, C=US, O=Internet Security Research Group, CN=ISRG Root X1
+2024-12-17 17:56:30 VERIFY OK: depth=1, C=US, O=Let's Encrypt, CN=R11
+2024-12-17 17:56:30 VERIFY KU OK
+2024-12-17 17:56:30 Validating certificate extended key usage
+2024-12-17 17:56:30 ++ Certificate has EKU (str) TLS Web Server Authentication, expects TLS Web Server Authentication
+2024-12-17 17:56:30 VERIFY EKU OK
+2024-12-17 17:56:30 VERIFY OK: depth=0, CN=opengw.net
+2024-12-17 17:56:30 Control Channel: TLSv1.3, cipher TLSv1.3 TLS_AES_256_GCM_SHA384, peer certificate: 2048 bits RSA, signature: RSA-SHA256, peer temporary key: 253 bits X25519
+2024-12-17 17:56:30 [opengw.net] Peer Connection Initiated with [AF_INET]219.100.37.119:1195
+2024-12-17 17:56:30 TLS: move_session: dest=TM_ACTIVE src=TM_INITIAL reinit_src=1
+2024-12-17 17:56:30 TLS: tls_multi_process: initial untrusted session promoted to trusted
+2024-12-17 17:56:31 SENT CONTROL [opengw.net]: 'PUSH_REQUEST' (status=1)
+2024-12-17 17:56:35 PUSH: Received control message: 'PUSH_REPLY,ping 3,ping-restart 10,ifconfig 10.240.22.197 10.240.22.198,dhcp-option DNS 10.240.254.254,dhcp-option DNS 8.8.8.8,route-gateway 10.240.22.198,redirect-gateway def1'
+2024-12-17 17:56:35 OPTIONS IMPORT: --ifconfig/up options modified
+2024-12-17 17:56:35 OPTIONS IMPORT: route options modified
+2024-12-17 17:56:35 OPTIONS IMPORT: route-related options modified
+2024-12-17 17:56:35 OPTIONS IMPORT: --ip-win32 and/or --dhcp-option options modified
+2024-12-17 17:56:35 Using peer cipher 'AES-128-CBC'
+2024-12-17 17:56:35 interactive service msg_channel=0
+2024-12-17 17:56:35 ROUTE_GATEWAY 192.168.0.1/255.255.255.0 I=14 HWADDR=84:5c:f3:94:de:c3
+2024-12-17 17:56:35 open_tun
+2024-12-17 17:56:35 tap-windows6 device [OpenVPN TAP-Windows6] opened
+2024-12-17 17:56:35 TAP-Windows Driver Version 9.27 
+2024-12-17 17:56:35 Notified TAP-Windows driver to set a DHCP IP/netmask of 10.240.22.197/255.255.255.252 on interface {770ECFFA-5BD9-4C1D-B285-F9B625584EA4} [DHCP-serv: 10.240.22.198, lease-time: 31536000]
+2024-12-17 17:56:35 Successful ARP Flush on interface [40] {770ECFFA-5BD9-4C1D-B285-F9B625584EA4}
+2024-12-17 17:56:35 IPv4 MTU set to 1500 on interface 40 using SetIpInterfaceEntry()
+2024-12-17 17:56:35 Data Channel: cipher 'AES-128-CBC', auth 'SHA1'
+2024-12-17 17:56:35 Timers: ping 3, ping-restart 10
+2024-12-17 17:56:40 TEST ROUTES: 1/1 succeeded len=0 ret=1 a=0 u/d=up
+2024-12-17 17:56:40 C:\WINDOWS\system32\route.exe ADD 219.100.37.119 MASK 255.255.255.255 192.168.0.1
+2024-12-17 17:56:40 Route addition via ipapi [adaptive] failed because route exists
+2024-12-17 17:56:40 C:\WINDOWS\system32\route.exe ADD 0.0.0.0 MASK 128.0.0.0 10.240.22.198
+2024-12-17 17:56:40 ROUTE: CreateIpForwardEntry succeeded with dwForwardMetric1=25 and dwForwardType=4
+2024-12-17 17:56:40 Route addition via ipapi [adaptive] succeeded
+2024-12-17 17:56:40 C:\WINDOWS\system32\route.exe ADD 128.0.0.0 MASK 128.0.0.0 10.240.22.198
+2024-12-17 17:56:40 ROUTE: CreateIpForwardEntry succeeded with dwForwardMetric1=25 and dwForwardType=4
+2024-12-17 17:56:40 Route addition via ipapi [adaptive] succeeded
+2024-12-17 17:56:40 Initialization Sequence Completed
+VPN 연결 종료 (코드: null, 신호: SIGINT)
